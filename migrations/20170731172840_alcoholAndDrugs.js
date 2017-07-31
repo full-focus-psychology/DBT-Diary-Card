@@ -6,6 +6,7 @@ exports.up = function(knex, Promise) {
     table.string('type')
     table.integer('amount')
     table.string('specify_drug')
+    table.timestamps()
   })
 };
 

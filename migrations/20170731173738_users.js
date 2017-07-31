@@ -6,6 +6,7 @@ exports.up = function(knex, Promise) {
     table.string('name')
     table.string('therapist')
     table.string('therapists_email')
+    table.timestamps()
   })
 };
 
