@@ -44,7 +44,7 @@
     "react-dom": "^15.5.4",
     "react-router-dom": "^4.1.1",
     "react-test-renderer": "^15.5.4",
-    "sqlite3": "^3.1.8",
+    "sqlite3": "^3.1.9",
     "supertest": "^3.0.0",
     "webpack": "^2.3.3",
     "webpack-dev-server": "^2.4.2"
