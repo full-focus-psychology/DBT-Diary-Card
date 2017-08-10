@@ -4,7 +4,8 @@ var bodyParser = require('body-parser')
 const cors = require('cors')
 
 
-var greetings = require('./routes/greeting')
+var skills = require('./routes/skills')
+var emotions = require('./routes/emotions')
 
 
 const corsOptions = {
@@ -20,7 +21,8 @@ server.use(cors(corsOptions))
 server.use(bodyParser.json())
 server.use(express.static(path.join(__dirname, '../public')))
 
-server.use('/api/greetings', greetings)
+server.use('/api/v1/emotions', emotions)
+server.use('/api/v1/skills', skills)
 
 module.exports = function(db) {
   server.set('db', db)
