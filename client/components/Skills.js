@@ -1,9 +1,20 @@
 import React from 'react'
+import {connect} from 'react-redux'
+import {getSkillList} from '../actions/skills'
 
-const Skills = () => (
+const renderSkill = (key, skill) => (
+      <h1 key={key}>{skill.id}</h1>
+  )
+
+const Skills = ({skills, dispatch}) => (
    <div>
-     <h1> Build your Skills </h1>
+    this.dispatch(getSkillList())
+    {renderSkill(skills)}
    </div>
-)
 
-export default Skills
+)
+const mapStateToProps = (state) => {
+  return {skills: state.skills}
+}
+
+export default connect(mapStateToProps)(Skills)
