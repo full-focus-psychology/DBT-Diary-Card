@@ -1,7 +1,9 @@
 import {combineReducers} from 'redux'
 
-import greetings from './greetings' 
+import skills from './skills'
+import emotions from './emotions'
 
 export default combineReducers({
-  greetings
+  emotions,
+  skills
 })
