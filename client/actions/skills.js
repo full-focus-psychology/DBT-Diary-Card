@@ -7,7 +7,7 @@ export const receiveSkills = (skills) => {
   }
 }
 
-export function getSkillList () {
+export function getSkillList() {
   return (dispatch) => {
     request
       .get(`/api/skills`)
