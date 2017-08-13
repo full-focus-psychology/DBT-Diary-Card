@@ -10,7 +10,7 @@ export const receiveSkills = (skills) => {
 export function getSkillList() {
   return (dispatch) => {
     request
-      .get(`/api/skills`)
+      .get(`/api/v1/skills`)
       .end((err, res) => {
         if (err) {
           console.error(err.message)

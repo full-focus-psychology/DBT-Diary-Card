@@ -12428,7 +12428,7 @@ var receiveSkills = exports.receiveSkills = function receiveSkills(skills) {
 
 function getSkillList() {
   return function (dispatch) {
-    _superagent2.default.get('/api/skills').end(function (err, res) {
+    _superagent2.default.get('/api/v1/skills').end(function (err, res) {
       if (err) {
         console.error(err.message);
         return;
