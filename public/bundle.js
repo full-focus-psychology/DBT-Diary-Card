@@ -12428,7 +12428,7 @@ var receiveSkills = exports.receiveSkills = function receiveSkills(skills) {
 
 function getSkillList() {
   return function (dispatch) {
-    _superagent2.default.get('/api/skills').end(function (err, res) {
+    _superagent2.default.get('/api/v1/skills').end(function (err, res) {
       if (err) {
         console.error(err.message);
         return;
@@ -12505,11 +12505,15 @@ var _skills = __webpack_require__(115);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var renderSkill = function renderSkill(key, skill) {
+var renderSkill = function renderSkill(i, skill) {
   return _react2.default.createElement(
-    'h1',
-    { key: key },
-    skill.id
+    'div',
+    null,
+    _react2.default.createElement(
+      'h1',
+      { key: i },
+      skill.action
+    )
   );
 };
 
@@ -12519,10 +12523,17 @@ var Skills = function Skills(_ref) {
   return _react2.default.createElement(
     'div',
     null,
-    'this.dispatch(getSkillList())',
-    renderSkill(skills)
+    _react2.default.createElement(
+      'button',
+      { onClick: function onClick() {
+          return dispatch((0, _skills.getSkillList)());
+        } },
+      'Show Skills'
+    ),
+    skills.map(renderSkill)
   );
 };
+
 var mapStateToProps = function mapStateToProps(state) {
   return { skills: state.skills };
 };

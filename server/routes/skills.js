@@ -6,7 +6,7 @@ var skillsDb = require('../db/db')
 router.get('/', (req, res) => {
   let db = req.app.get('db')
   skillsDb.getSkillList(db)
-    .then(skills => {
+    .then((skills) => {
       res.json(skills)
     })
 })

@@ -10,7 +10,7 @@ export const receiveEmotions = (emotions) => {
 export function getEmotionList () {
   return (dispatch) => {
     request
-      .get(`/api/emotions`)
+      .get(`/api/v1/emotions`)
       .end((err, res) => {
         if (err) {
           console.error(err.message)

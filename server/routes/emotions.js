@@ -6,7 +6,7 @@ var emotionsDb = require('../db/db')
 router.get('/', (req, res) => {
   let db = req.app.get('db')
   emotionsDb.getEmotionList(db)
-    .then(emotions => {
+    .then((emotions) => {
       res.json(emotions)
     })
 })
