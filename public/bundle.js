@@ -14566,6 +14566,10 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _MuiThemeProvider = __webpack_require__(311);
+
+var _MuiThemeProvider2 = _interopRequireDefault(_MuiThemeProvider);
+
 var _DailyCheckBoxes = __webpack_require__(193);
 
 var _DailyCheckBoxes2 = _interopRequireDefault(_DailyCheckBoxes);
@@ -14573,7 +14577,11 @@ var _DailyCheckBoxes2 = _interopRequireDefault(_DailyCheckBoxes);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var AlanTestComponent = function AlanTestComponent() {
-  return _react2.default.createElement(_DailyCheckBoxes2.default, null);
+  return _react2.default.createElement(
+    _MuiThemeProvider2.default,
+    null,
+    _react2.default.createElement(_DailyCheckBoxes2.default, null)
+  );
 };
 
 exports.default = AlanTestComponent;
@@ -14595,10 +14603,6 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _MuiThemeProvider = __webpack_require__(311);
-
-var _MuiThemeProvider2 = _interopRequireDefault(_MuiThemeProvider);
-
 var _Checkbox = __webpack_require__(301);
 
 var _Checkbox2 = _interopRequireDefault(_Checkbox);
@@ -14607,9 +14611,62 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var DailyCheckBoxes = function DailyCheckBoxes(props) {
   return _react2.default.createElement(
-    'div',
+    'span',
     null,
-    'test'
+    _react2.default.createElement(
+      'div',
+      { style: { display: 'flex', flexDirection: 'row' } },
+      _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'p',
+          null,
+          'Day'
+        )
+      ),
+      _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'p',
+          null,
+          'Diary Card'
+        )
+      ),
+      _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'p',
+          null,
+          'Skills'
+        )
+      )
+    ),
+    _react2.default.createElement(
+      'div',
+      { style: { display: 'flex', flexDirection: 'row' } },
+      _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'p',
+          null,
+          'Monday'
+        )
+      ),
+      _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(_Checkbox2.default, null)
+      ),
+      _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(_Checkbox2.default, null)
+      )
+    )
   );
 };
 
