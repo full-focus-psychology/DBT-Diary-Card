@@ -14609,64 +14609,76 @@ var _Checkbox2 = _interopRequireDefault(_Checkbox);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var DailyCheckBoxes = function DailyCheckBoxes(props) {
-  return _react2.default.createElement(
-    'span',
-    null,
+var days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+var renderDays = function renderDays() {
+  return days.map(function (day) {
     _react2.default.createElement(
       'div',
-      { style: { display: 'flex', flexDirection: 'row' } },
+      { className: 'dailyCheckBoxes' },
       _react2.default.createElement(
         'div',
-        null,
+        { className: 'dailyCheckBox' },
         _react2.default.createElement(
           'p',
           null,
-          'Day'
+          day
         )
       ),
       _react2.default.createElement(
         'div',
-        null,
-        _react2.default.createElement(
-          'p',
-          null,
-          'Diary Card'
-        )
+        { className: 'dailyCheckBox' },
+        _react2.default.createElement(_Checkbox2.default, null)
       ),
       _react2.default.createElement(
         'div',
+        { className: 'dailyCheckBox' },
+        _react2.default.createElement(_Checkbox2.default, null)
+      )
+    );
+  });
+};
+
+var renderHeader = function renderHeader() {
+  return _react2.default.createElement(
+    'div',
+    { className: 'dailyCheckBoxes' },
+    _react2.default.createElement(
+      'div',
+      { className: 'dailyCheckBox' },
+      _react2.default.createElement(
+        'p',
         null,
-        _react2.default.createElement(
-          'p',
-          null,
-          'Skills'
-        )
+        'Day'
       )
     ),
     _react2.default.createElement(
       'div',
-      { style: { display: 'flex', flexDirection: 'row' } },
+      { className: 'dailyCheckBox' },
       _react2.default.createElement(
-        'div',
+        'p',
         null,
-        _react2.default.createElement(
-          'p',
-          null,
-          'Monday'
-        )
-      ),
+        'Diary Card'
+      )
+    ),
+    _react2.default.createElement(
+      'div',
+      { className: 'dailyCheckBox' },
       _react2.default.createElement(
-        'div',
+        'p',
         null,
-        _react2.default.createElement(_Checkbox2.default, null)
-      ),
-      _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(_Checkbox2.default, null)
+        'Col'
       )
     )
+  );
+};
+
+var DailyCheckBoxes = function DailyCheckBoxes(props) {
+  return _react2.default.createElement(
+    'div',
+    null,
+    renderHeader(),
+    renderDays()
   );
 };
 

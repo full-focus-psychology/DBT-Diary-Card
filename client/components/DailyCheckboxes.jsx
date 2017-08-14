@@ -1,33 +1,43 @@
 import React from 'react'
 import Checkbox from 'material-ui/Checkbox'
 
+const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+
+const renderDays = () => (
+  days.map((day) => {
+    <div className = 'dailyCheckBoxes'>
+      <div className='dailyCheckBox'>
+        <p>{day}</p>
+      </div>
+      <div className='dailyCheckBox'>
+        <Checkbox />
+      </div>
+      <div className='dailyCheckBox'>
+        <Checkbox />
+      </div>
+    </div>
+  })
+)
+
+const renderHeader = () => (
+  <div className='dailyCheckBoxes'>
+    <div className='dailyCheckBox'>
+      <p>Day</p>
+    </div>
+    <div className='dailyCheckBox'>
+      <p>Diary Card</p>
+    </div>
+    <div className='dailyCheckBox'>
+      <p>Col</p>
+    </div>
+  </div>
+)
+
 const DailyCheckBoxes = (props) => (
-  <span>
-    <div style={{display: 'flex', flexDirection: 'row'}}>
-      <div>
-        <p>Day</p>
-      </div>
-      <div>
-        <p>Diary Card</p>
-      </div>
-      <div>
-        <p>Skills</p>
-      </div>
-    </div>
-    <div style={{display: 'flex', flexDirection: 'row'}}>
-      <div>
-        <p>Monday</p>
-      </div>
-      <div>
-        <Checkbox
-        />
-      </div>
-      <div>
-        <Checkbox
-        />
-      </div>
-    </div>
-  </span>
+  <div>
+    {renderHeader()}
+    {renderDays()}
+  </div>
 )
 
 export default DailyCheckBoxes
