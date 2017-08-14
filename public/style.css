@@ -2,17 +2,23 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-
 .dailyCheckBoxes {
 	display: -webkit-flex;
 	display: flex;
 	-webkit-flex-flow: row wrap;
 	flex-flow: row wrap;
-	-webkit-justify-content: space-between;
-	justify-content:space-between;
+  width: 450px;
+	-webkit-justify-content: center;
+	justify-content: center;
+  align-items: center;
+  -webkit-align-items: center;
 }
 
 .dailyCheckBox {
 	-webkit-flex: 1 0 auto;
 	flex: 1 0 auto;
+  width: 50px;
+}
+.tickBox {
+  vertical-align: middle;
 }

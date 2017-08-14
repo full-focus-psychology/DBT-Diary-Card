@@ -3,21 +3,23 @@ import Checkbox from 'material-ui/Checkbox'
 
 const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 
-const renderDays = () => (
-  days.map((day) => {
-    <div className = 'dailyCheckBoxes'>
-      <div className='dailyCheckBox'>
-        <p>{day}</p>
+function renderDays(days)  {
+  return days.map((day) => {
+    return (
+      <div className = 'dailyCheckBoxes'>
+        <div className='dailyCheckBox'>
+          <p>{day}</p>
+        </div>
+        <div className='dailyCheckBox tickBox'>
+          <Checkbox />
+        </div>
+        <div className='dailyCheckBox tickBox'>
+          <Checkbox />
+        </div>
       </div>
-      <div className='dailyCheckBox'>
-        <Checkbox />
-      </div>
-      <div className='dailyCheckBox'>
-        <Checkbox />
-      </div>
-    </div>
+    )
   })
-)
+}
 
 const renderHeader = () => (
   <div className='dailyCheckBoxes'>
@@ -28,7 +30,7 @@ const renderHeader = () => (
       <p>Diary Card</p>
     </div>
     <div className='dailyCheckBox'>
-      <p>Col</p>
+      <p>Skills</p>
     </div>
   </div>
 )
@@ -36,7 +38,7 @@ const renderHeader = () => (
 const DailyCheckBoxes = (props) => (
   <div>
     {renderHeader()}
-    {renderDays()}
+    {renderDays(days)}
   </div>
 )
 

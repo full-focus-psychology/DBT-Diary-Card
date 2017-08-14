@@ -14611,9 +14611,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
-var renderDays = function renderDays() {
+function renderDays(days) {
   return days.map(function (day) {
-    _react2.default.createElement(
+    return _react2.default.createElement(
       'div',
       { className: 'dailyCheckBoxes' },
       _react2.default.createElement(
@@ -14627,17 +14627,17 @@ var renderDays = function renderDays() {
       ),
       _react2.default.createElement(
         'div',
-        { className: 'dailyCheckBox' },
+        { className: 'dailyCheckBox tickBox' },
         _react2.default.createElement(_Checkbox2.default, null)
       ),
       _react2.default.createElement(
         'div',
-        { className: 'dailyCheckBox' },
+        { className: 'dailyCheckBox tickBox' },
         _react2.default.createElement(_Checkbox2.default, null)
       )
     );
   });
-};
+}
 
 var renderHeader = function renderHeader() {
   return _react2.default.createElement(
@@ -14667,7 +14667,7 @@ var renderHeader = function renderHeader() {
       _react2.default.createElement(
         'p',
         null,
-        'Col'
+        'Skills'
       )
     )
   );
@@ -14678,7 +14678,7 @@ var DailyCheckBoxes = function DailyCheckBoxes(props) {
     'div',
     null,
     renderHeader(),
-    renderDays()
+    renderDays(days)
   );
 };
 
