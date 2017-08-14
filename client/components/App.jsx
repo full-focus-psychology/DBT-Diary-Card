@@ -4,6 +4,7 @@ import {HashRouter as Router, Route} from 'react-router-dom'
 import Home from './Home'
 import Skills from './Skills'
 import diaryCard from './diaryCard'
+import AlanTestComponent from './AlanTestComponent'
 
 const App = () => (
   <Router>
@@ -12,6 +13,7 @@ const App = () => (
       <Route exact path="/" component={Home} />
       <Route exact path="/skills" component={Skills} />
       <Route exact path="/diary-card" component={diaryCard} />
+      <Route exact path="/alan-test" component={AlanTestComponent} />
     </div>
   </Router>
 )
