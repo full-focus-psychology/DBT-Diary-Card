@@ -6,14 +6,14 @@ const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'
 function renderDays(days)  {
   return days.map((day) => {
     return (
-      <div className = 'dailyCheckBoxes'>
-        <div className='dailyCheckBox'>
+      <div className = 'row'>
+        <div className='col'>
           <p>{day}</p>
         </div>
-        <div className='dailyCheckBox tickBox'>
+        <div className='col tickBox'>
           <Checkbox />
         </div>
-        <div className='dailyCheckBox tickBox'>
+        <div className='col tickBox'>
           <Checkbox />
         </div>
       </div>
@@ -22,14 +22,14 @@ function renderDays(days)  {
 }
 
 const renderHeader = () => (
-  <div className='dailyCheckBoxes'>
-    <div className='dailyCheckBox'>
+  <div className='row'>
+    <div className='col'>
       <p>Day</p>
     </div>
-    <div className='dailyCheckBox'>
+    <div className='col'>
       <p>Diary Card</p>
     </div>
-    <div className='dailyCheckBox'>
+    <div className='col'>
       <p>Skills</p>
     </div>
   </div>

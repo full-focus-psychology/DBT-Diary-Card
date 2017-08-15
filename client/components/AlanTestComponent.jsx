@@ -2,11 +2,17 @@ import React from 'react'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
 import DailyCheckBoxes from './DailyCheckBoxes'
+import Urges from './Urges'
 
 const AlanTestComponent = () => (
-  <MuiThemeProvider>
-    <DailyCheckBoxes />
-  </MuiThemeProvider>
+  <div>
+    <MuiThemeProvider>
+      <DailyCheckBoxes />
+    </MuiThemeProvider>
+    <MuiThemeProvider>
+      <Urges />
+    </MuiThemeProvider>
+  </div>
 )
 
 export default AlanTestComponent
