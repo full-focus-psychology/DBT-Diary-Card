@@ -17823,6 +17823,10 @@ var _Urges = __webpack_require__(211);
 
 var _Urges2 = _interopRequireDefault(_Urges);
 
+var _Emotions = __webpack_require__(504);
+
+var _Emotions2 = _interopRequireDefault(_Emotions);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var AlanTestComponent = function AlanTestComponent() {
@@ -17838,6 +17842,11 @@ var AlanTestComponent = function AlanTestComponent() {
       _MuiThemeProvider2.default,
       null,
       _react2.default.createElement(_Urges2.default, null)
+    ),
+    _react2.default.createElement(
+      _MuiThemeProvider2.default,
+      null,
+      _react2.default.createElement(_Emotions2.default, null)
     )
   );
 };
@@ -47694,6 +47703,80 @@ var ZeroToFiveDropdown = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = ZeroToFiveDropdown;
+
+/***/ }),
+/* 504 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _ZeroToFiveDropdown = __webpack_require__(503);
+
+var _ZeroToFiveDropdown2 = _interopRequireDefault(_ZeroToFiveDropdown);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var day = 'Monday'; // We will pass this to the component as a prop at a later dte
+
+var Emotions = function (_React$Component) {
+  _inherits(Emotions, _React$Component);
+
+  function Emotions() {
+    _classCallCheck(this, Emotions);
+
+    return _possibleConstructorReturn(this, (Emotions.__proto__ || Object.getPrototypeOf(Emotions)).apply(this, arguments));
+  }
+
+  _createClass(Emotions, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'h2',
+          null,
+          day
+        ),
+        _react2.default.createElement(
+          'h3',
+          null,
+          'Emotions'
+        ),
+        _react2.default.createElement(_ZeroToFiveDropdown2.default, { type: 'Sad' }),
+        _react2.default.createElement(_ZeroToFiveDropdown2.default, { type: 'Shame' }),
+        _react2.default.createElement(_ZeroToFiveDropdown2.default, { type: 'Anger' }),
+        _react2.default.createElement(_ZeroToFiveDropdown2.default, { type: 'Joy' }),
+        _react2.default.createElement(_ZeroToFiveDropdown2.default, { type: 'Fear' }),
+        _react2.default.createElement(_ZeroToFiveDropdown2.default, { type: 'Guilt' }),
+        _react2.default.createElement(_ZeroToFiveDropdown2.default, { type: 'Jealousy' }),
+        _react2.default.createElement(_ZeroToFiveDropdown2.default, { type: 'Disgust' }),
+        _react2.default.createElement(_ZeroToFiveDropdown2.default, { type: 'Envy' })
+      );
+    }
+  }]);
+
+  return Emotions;
+}(_react2.default.Component);
+
+exports.default = Emotions;
 
 /***/ })
 /******/ ]);

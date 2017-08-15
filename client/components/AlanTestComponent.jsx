@@ -3,6 +3,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
 import DailyCheckBoxes from './DailyCheckBoxes'
 import Urges from './Urges'
+import Emotions from './Emotions'
 
 const AlanTestComponent = () => (
   <div>
@@ -11,6 +12,9 @@ const AlanTestComponent = () => (
     </MuiThemeProvider>
     <MuiThemeProvider>
       <Urges />
+    </MuiThemeProvider>
+    <MuiThemeProvider>
+      <Emotions />
     </MuiThemeProvider>
   </div>
 )
