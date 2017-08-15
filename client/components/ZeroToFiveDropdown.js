@@ -6,7 +6,7 @@ injectTapEventPlugin()
 
 const day = 'Monday' // We will pass this to the component as a prop at a later dte
 
-export default class UrgesDropDown extends React.Component {
+export default class ZeroToFiveDropdown extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
