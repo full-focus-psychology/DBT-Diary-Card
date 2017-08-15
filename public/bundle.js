@@ -17870,10 +17870,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
 function renderDays(days) {
-  return days.map(function (day) {
+  return days.map(function (day, i) {
     return _react2.default.createElement(
       'div',
-      { className: 'row' },
+      { key: i, className: 'row' },
       _react2.default.createElement(
         'div',
         { className: 'col' },

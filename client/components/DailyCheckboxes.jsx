@@ -4,9 +4,9 @@ import Checkbox from 'material-ui/Checkbox'
 const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 
 function renderDays(days)  {
-  return days.map((day) => {
+  return days.map((day, i) => {
     return (
-      <div className = 'row'>
+      <div key = {i} className = 'row'>
         <div className='col'>
           <p>{day}</p>
         </div>
