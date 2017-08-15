@@ -4,8 +4,6 @@ import MenuItem from 'material-ui/MenuItem'
 import injectTapEventPlugin from 'react-tap-event-plugin'
 injectTapEventPlugin()
 
-const day = 'Monday' // We will pass this to the component as a prop at a later dte
-
 export default class ZeroToFiveDropdown extends React.Component {
   constructor(props) {
     super(props)
