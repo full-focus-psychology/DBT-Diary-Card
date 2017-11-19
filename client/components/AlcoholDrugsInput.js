@@ -17,10 +17,10 @@ export default class AlcoholDrugsInput extends React.Component {
           <p>{this.state.type}</p>
         </div>
         <div className='colWide'>
-          <TextField hintText="enter value" />
+          <TextField hintText="Enter amount" />
         </div>
         <div className='colWide'>
-          <TextField hintText="enter value" />
+          <TextField hintText="Specify" />
         </div>
       </div>
     )

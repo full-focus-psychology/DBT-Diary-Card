@@ -11,9 +11,9 @@ export default class AlcoholDrugs extends React.Component {
         <h2>{day}</h2>
         <h3>Alcohol and Drugs</h3>
         <AlcoholDrugsInput type={'Illicit'} />
-        <AlcoholDrugsInput type={'ETOH'} />
+        <AlcoholDrugsInput type={'Alcohol'} />
         <AlcoholDrugsInput type={'Prescription'} />
-        <AlcoholDrugsInput type={'OTC'} />
+        <AlcoholDrugsInput type={'Over the counter'} />
       </div>
     )
   }

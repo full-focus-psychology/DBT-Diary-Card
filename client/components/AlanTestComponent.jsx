@@ -1,7 +1,7 @@
 import React from 'react'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
-import DailyCheckBoxes from './DailyCheckBoxes'
+import DailyCheckBoxes from './DailyCheckboxes'
 import Urges from './Urges'
 import Emotions from './Emotions'
 import AlcoholDrugs from './AlcoholDrugs'
